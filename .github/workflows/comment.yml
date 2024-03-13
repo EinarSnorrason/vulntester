@@ -1,7 +1,7 @@
 name: PR Quality Checker
 
 on:
-  pull:
+  pull-request:
   push:
 
 permissions:
