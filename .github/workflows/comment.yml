@@ -1,7 +1,7 @@
 name: PR Quality Checker
 
 on:
-  pull_request_target:
+  pull:
   push:
 
 permissions:
@@ -12,9 +12,4 @@ jobs:
   check-quality:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - shell: bash
-        env:
-          FLAG: ${{ secrets.FLAG }}
-        run: ./safetychecker.sh
-        continue-on-error: true
+      - run: echo "hi"
